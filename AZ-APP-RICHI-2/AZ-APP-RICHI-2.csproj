@@ -5,6 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>AZ_APP_RICHI_2</RootNamespace>
+    <ApplicationInsightsResourceId>/subscriptions/6c7dceb3-2295-43e6-969a-e2db9b3e0f83/resourceGroups/az-course/providers/microsoft.insights/components/AZ-INSIGHT-APP-RICHI-2</ApplicationInsightsResourceId>
+    <UserSecretsId>92d893e4-4955-42a7-b7f5-0058f4d6e92b</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
+  </ItemGroup>
 
 </Project>

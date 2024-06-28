@@ -14,6 +14,7 @@ namespace AZ_APP_RICHI_2.Pages
 
         public void OnGet()
         {
+            throw new Exception("Testing Insights"); 
         }
     }
 }
