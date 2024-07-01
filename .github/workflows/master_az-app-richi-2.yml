@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - AZ-APP-RICHI-2
+name: Build and deploy ASP.Net Core app to Azure Web App - az-app-richi-2
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '8.x'
+          dotnet-version: '6.0.x'
           include-prerelease: true
 
       - name: Build with dotnet
@@ -52,15 +52,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_BACFA63C3DDF48E3A50E0959DC1C59FB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_05C4194BDA75412C9FB52B7F868CF6A0 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AFFCAC61A6AD442DBD845C0A1AB9B056 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5D4781F32C5D4044A923E4411027EFAA }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FF1FF1E873324ACDBF9E3B0A48357B19 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1806912A5DD64927B6DA7CD3F06A39FF }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'AZ-APP-RICHI-2'
+          app-name: 'az-app-richi-2'
           slot-name: 'Production'
           package: .
           
